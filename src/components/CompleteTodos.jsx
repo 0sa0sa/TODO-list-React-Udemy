@@ -5,16 +5,16 @@ export const CompleteTodos = (props) => {
   return (
     <div className="complete-area">
       <p className="title">完了のTODO</p>
-      <ul>
+      <ol>
         {todos.map((todo, index) => {
           return (
-            <div key={todo} className="list-row">
+            <div key={index} className="list-row">
               <li>{todo}</li>
               <button onClick={() => onClickReturn(index)}>戻す</button>
             </div>
           );
         })}
-      </ul>
+      </ol>
     </div>
   );
 };
